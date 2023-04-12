@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Container from "./components/Container";
+import WalletDetails from "./components/WalletDetails";
+import ClientOnly from "./components/ClientOnly";
 
 export default function Home() {
   return (
@@ -21,14 +23,9 @@ export default function Home() {
             <p>Account Abstraction Tutorial</p>
           </div>
 
-          <div>
-            <h2 className="font-semibold text-lg text-rose-500">
-              Seems like haven&apos;t connected yet
-            </h2>
-            <p className="text-neutral-500">
-              👛Please connect your wallet to proceed{" "}
-            </p>
-          </div>
+          <ClientOnly>
+            <WalletDetails />
+          </ClientOnly>
         </div>
       </div>
     </Container>
