@@ -1,3 +1,5 @@
+import ClientOnly from "./ClientOnly";
+import ConnectWalletBtn from "./ConnectWalletBtn";
 import Container from "./Container";
 
 function Navbar() {
@@ -14,7 +16,11 @@ function Navbar() {
             md:gap-0"
           >
             <p>PSFMA Task by Noor Muhammad</p>
-            <p>Connect Wallet</p>
+            <div>
+              <ClientOnly>
+                <ConnectWalletBtn />
+              </ClientOnly>
+            </div>
           </div>
         </Container>
       </div>
